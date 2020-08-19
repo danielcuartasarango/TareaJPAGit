@@ -19,14 +19,14 @@ private EntityManager gestorBd;
 	 * en la carpeta META-INF
 	 */
 	public OrmEmpleados() {
-		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("Barcos7");
+		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("Empleados");
 		gestorBd = fabrica.createEntityManager();
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Empleado> consultarEmpleados() {
-		Query query = gestorBd.createQuery("select b from Barco b");
+		Query query = gestorBd.createQuery("select b from Empleado b");
 		List<Empleado> barcos = query.getResultList();
 		return barcos;
 	}

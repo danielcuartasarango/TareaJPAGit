@@ -6,9 +6,10 @@
 
  <persistence-unit transaction-type="RESOURCE_LOCAL" name="Empleados">
 <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-<class>puertos.entidades.Barco</class>
-<class>puertos.entidades.Carguero</class>
-<class>puertos.entidades.Velero</class>
+<class>empleados.Empleado</class>
+<class>empleados.Asalariado</class>
+<class>empleados.Comision</class>
+<class>empleados.Hora</class>
 <properties>
  <property name="javax.persistence.jdbc.driver"
  value="org.sqlite.JDBC"/>
