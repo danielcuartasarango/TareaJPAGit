@@ -14,7 +14,7 @@
  <property name="javax.persistence.jdbc.driver"
  value="org.sqlite.JDBC"/>
  <property name="javax.persistence.jdbc.url"
- value="jdbc:sqlite:barcosOrm.db"/>
+ value="jdbc:sqlite:empleadosOrm.db"/>
  <property name="eclipselink.ddl-generation" value="create-tables"/>
  <property name="eclipselink.target-database"
  value="database" />
