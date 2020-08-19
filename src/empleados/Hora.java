@@ -20,4 +20,25 @@ public class Hora extends Empleado {
 		
 	}
 
+
+	public double getHorasLaboradas() {
+		return horasLaboradas;
+	}
+
+
+	public void setHorasLaboradas(double horasLaboradas) {
+		this.horasLaboradas = horasLaboradas;
+	}
+
+
+	public double getPrecioHora() {
+		return precioHora;
+	}
+
+
+	public void setPrecioHora(double precioHora) {
+		this.precioHora = precioHora;
+	}
+	
+
 }

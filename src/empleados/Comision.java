@@ -16,6 +16,14 @@ public class Comision extends Empleado{
 		super(identificacion, nombre);
 		this.ventas= ventas;
 	}
+
+	public double getVentas() {
+		return ventas;
+	}
+
+	public void setVentas(double ventas) {
+		this.ventas = ventas;
+	}
 	
 	
 
