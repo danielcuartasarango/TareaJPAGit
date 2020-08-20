@@ -57,8 +57,7 @@ public class Control {
 			double nomina = 0;
 			for (Empleado empleado : empleados) {
 				nomina += empleado.calcularSalario();
-				System.out.println(nomina);
-			}
+				}
 			return nomina;
 		}
 	

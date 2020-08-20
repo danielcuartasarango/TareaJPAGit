@@ -21,7 +21,7 @@ public class OrmEmpleados implements Repositorio{
 private EntityManager gestorBd;
 	
 	/** 
-	 * La unidad de persistencia ("Persistence unit") llamada Barcos7
+	 * La unidad de persistencia ("Persistence unit") llamada Empleados
 	 * está definida en el archivo de configuración persistence.xml,
 	 * en la carpeta META-INF
 	 */
@@ -34,8 +34,8 @@ private EntityManager gestorBd;
 	@Override
 	public List<Empleado> consultarEmpleados() {
 		Query query = gestorBd.createQuery("select b from Empleado b");
-		List<Empleado> barcos = query.getResultList();
-		return barcos;
+		List<Empleado> empleado = query.getResultList();
+		return empleado;
 	}
 
 	@Override
@@ -61,10 +61,6 @@ private EntityManager gestorBd;
 	public boolean borrarEmpleado(Empleado empleado) {
 		try	{
 			gestorBd.getTransaction().begin();
-			// Esto funciona porque el EntityManager está abierto todo el tiempo
-			// Y el objeto barco ha sido consultado previamente,
-			// por lo que está "enlazado" con la base de datos.
-			// Si no fuera el caso debe "enlazarse" (ver clase OrmBarcos2)
 			gestorBd.remove(empleado);
 			gestorBd.getTransaction().commit();
 		}
