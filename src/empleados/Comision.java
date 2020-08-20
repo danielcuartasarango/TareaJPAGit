@@ -9,12 +9,12 @@ import javax.persistence.Entity;
 @DiscriminatorValue("comision")
 public class Comision extends Empleado{
 	private double salario;
-	private int ventas;
+	private double ventas;
 	public Comision() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Comision(String identificacion,String nombre,double salario, int ventas) {
+	public Comision(String identificacion,String nombre,double salario, double ventas) {
 		super(identificacion, nombre);	
 		this.salario=salario;
 		this.ventas= ventas;
