@@ -7,7 +7,13 @@ import empleados.FabricaEmpleados;
 import persistencia.OrmEmpleados;
 import persistencia.Repositorio;
 
-
+/**
+ * Clase que lleva el control de los empleados y sus nóminas
+ * @author Sebastián Orozco Medina
+ * @author Daniel Andrés Cuartas
+ * @autor  Camilo Vargas
+ * @version 1.0
+ */
 public class Control {
 	
 	
@@ -17,7 +23,17 @@ public class Control {
 		repositorio = new OrmEmpleados();
 	}
 
-
+	/**
+	 * Permite adicionar un empleado a la base de datos
+	 * @param identificacion	Es la identificación del empleado
+	 * @param nombre			Es el nombre del empleado
+	 * @param horasLaboradas	Son las horas que laboró el empleado en una semana
+	 * @param tipo				Es el tipo de empleado -> Asalariado, por horas, por comisión
+	 * @param precioHora		Es el precio que cobra por horas el empleado por horas
+	 * @param ventas			Son las ventas que realizó el empleado
+	 * @param salario			Es el Salario base del empleado
+	 * @return					Retorna si se pudo adicionar o no el empleado
+	 */
 	public boolean adicionarEmpleado(String identificacion, String nombre,
 			double horasLaboradas, char tipo, double precioHora,  double ventas, double salario ) 
 			 {
@@ -31,6 +47,10 @@ public class Control {
 				return false;
 			}
 	
+	/**
+	 * Permite calcular el valor de nóminas a pagar a los empleados
+	 * @return	Retorna la nómina de la empresa
+	 */
 	public double valorNomina() {
 		
 			List<Empleado> empleados = repositorio.consultarEmpleados();
@@ -42,5 +62,13 @@ public class Control {
 			return nomina;
 		}
 	
+	/**
+	 * Busca un empleado de la empresa en la base de datos
+	 * @param identificacion	Es la identificación del empleado a buscar
+	 * @return		Retorna el empleado a buscar
+	 */
+	public Empleado buscarEmpleado(String identificacion) {
+		return repositorio.buscarEmpleado(identificacion);
+	}
 
 }

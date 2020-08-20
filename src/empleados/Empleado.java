@@ -6,6 +6,13 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
+/**
+ * Clase que permite modelar un empleado de la empresa
+ * @author Sebastián Orozco Medina
+ * @author Daniel Andrés Cuartas
+ * @autor  Camilo Vargas
+ * @version 1.0
+ */
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "tipo")

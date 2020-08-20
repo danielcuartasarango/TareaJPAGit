@@ -16,8 +16,8 @@ public class pruebajpa {
 				Persistence.createEntityManagerFactory("Empleados");
 				EntityManager gestorBD = fabrica.createEntityManager();
 				gestorBD.getTransaction().begin();
-				Empleado empleado =  new Asalariado("100335","simon", 5000);
-				Empleado empleado2 =  new Hora("100611","simon", 5,2500);
+				Empleado empleado =  new Asalariado("100005","simon", 5000);
+				Empleado empleado2 =  new Hora("100601","simon", 5,2500);
 				
 				gestorBD.persist(empleado);
 				gestorBD.persist(empleado2);

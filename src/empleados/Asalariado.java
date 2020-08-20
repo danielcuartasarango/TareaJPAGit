@@ -3,6 +3,13 @@ package empleados;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
+/**
+ * Clase que permite modelar un empleado asalariado
+ * @author Sebastián Orozco Medina
+ * @author Daniel Andrés Cuartas
+ * @autor  Camilo Vargas
+ * @version 1.0
+ */
 @Entity
 @DiscriminatorValue("asalariado")
 public class Asalariado extends Empleado {

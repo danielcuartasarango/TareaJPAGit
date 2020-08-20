@@ -1,11 +1,18 @@
 package empleados;
 
 
+/**
+ * Clase Fábrica de objetos empleados dependiendo el tipo de empleado que sea
+ * @author Sebastián Orozco Medina
+ * @author Daniel Andrés Cuartas
+ * @autor  Camilo Vargas
+ * @version 1.0
+ */
 
 public class FabricaEmpleados {
 	
 	
-
+	
 	public static Empleado crearEmpleado(String identificacion, String nombre,
 			double horasLaboradas, char tipo, double precioHora,  double ventas, double salario ) {
 		switch (tipo){

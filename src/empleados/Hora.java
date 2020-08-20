@@ -3,6 +3,13 @@ package empleados;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
+/**
+ * Clase que permite modelar un empleado por horas
+ * @author Sebastián Orozco Medina
+ * @author Daniel Andrés Cuartas
+ * @autor  Camilo Vargas
+ * @version 1.0
+ */
 @Entity
 @DiscriminatorValue("hora")
 public class Hora extends Empleado {
@@ -45,7 +52,12 @@ public class Hora extends Empleado {
 	 * 		   por el salario establecido.
 	 */
 	public double calcularSalario() {
-		return this.precioHora*this.horasLaboradas;
+		double bono = 0;
+		if(horasLaboradas > 40)
+		{
+			bono = 200000;
+		}
+		return this.precioHora*this.horasLaboradas + bono;
 	}
 
 }

@@ -9,6 +9,13 @@ import javax.persistence.Query;
 
 import empleados.Empleado;
 
+/**
+ * Clase que permite modelar la base de datos del sistema
+ * @author Sebastián Orozco Medina
+ * @author Daniel Andrés Cuartas
+ * @autor  Camilo Vargas
+ * @version 1.0
+ */
 public class OrmEmpleados implements Repositorio{
 
 private EntityManager gestorBd;

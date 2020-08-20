@@ -4,11 +4,12 @@ import java.util.List;
 
 import empleados.Empleado;
 
-
 /**
- * 
- * @author Daniel Cuartas
- *
+ * repositorio donde se almacenará la información del sistema
+ * @author Sebastián Orozco Medina
+ * @author Daniel Andrés Cuartas
+ * @autor  Camilo Vargas
+ * @version 1.0
  */
 
 public interface Repositorio {

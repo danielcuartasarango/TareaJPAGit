@@ -3,7 +3,11 @@ package empleados;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 /**
- * Clase de empleados que ganan un salario semanal fijo
+ * Clase que permite modelar un empleado por comisión
+ * @author Sebastián Orozco Medina
+ * @author Daniel Andrés Cuartas
+ * @autor  Camilo Vargas
+ * @version 1.0
  */
 @Entity
 @DiscriminatorValue("comision")
@@ -33,7 +37,7 @@ public class Comision extends Empleado{
 	 * @return Retorna la suma de la comision por ventas mas el salario base del empleado
 	 */
 	public double calcularSalario() {
-		double comision= ((this.salario/100)*5)*this.ventas;
+		double comision= this.ventas*0.05;
 		return this.salario+comision;
 	}
 	
