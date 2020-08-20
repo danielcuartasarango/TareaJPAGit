@@ -40,6 +40,11 @@ public abstract class Empleado {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}	
+	
+	/**
+	 * Metodo abstracto para calcular salario de los empleados
+	 */
+	public abstract double calcularSalario();
 
 	
 }

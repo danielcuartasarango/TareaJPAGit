@@ -26,5 +26,12 @@ public class Asalariado extends Empleado {
 		this.salario = salario;
 	}
 	
+	/**
+	 * @retorna el salario semanal del empleado
+	 */
+	public double calcularSalario() {
+		return this.salario;
+	}
+	
 
 }

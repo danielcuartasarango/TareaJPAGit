@@ -6,8 +6,8 @@ import javax.persistence.Entity;
 @Entity
 @DiscriminatorValue("hora")
 public class Hora extends Empleado {
-	double horasLaboradas=0;
-	double precioHora=0;
+	double horasLaboradas;
+	double precioHora;
 	public Hora() {
 		// TODO Auto-generated constructor stub
 	}
@@ -40,5 +40,12 @@ public class Hora extends Empleado {
 		this.precioHora = precioHora;
 	}
 	
+	/**
+	 * @return Retorna el salario correspondiente a las horas trabajadas
+	 * 		   por el salario establecido.
+	 */
+	public double calcularSalario() {
+		return this.precioHora*this.horasLaboradas;
+	}
 
 }

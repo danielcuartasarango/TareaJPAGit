@@ -6,16 +6,20 @@ public class FabricaEmpleados {
 	
 	
 	public static Empleado crearEmpleado(String identificacion, String nombre,
-			double horasLaboradas, char tipo, double precioHora,  double ventas, double salario ) {
-		switch (tipo){
-			case 'a':
-			case 'A': 	return new Asalariado(identificacion,nombre, salario);
-			case 'h':
-			case 'H': 	return new Hora(identificacion, nombre, horasLaboradas, precioHora);
-			case 'v':
-			case 'V': 	return new Comision(identificacion, nombre,ventas);
-		}
-		return null;
+			double horasLaboradas, char tipo, double ventas, double salario ) {
+			
+		Empleado empleado=null;
+		
+		if(tipo=='a'||tipo=='A')
+			empleado= new Asalariado(identificacion, nombre, salario);
+		
+		if(tipo=='c'||tipo=='C')
+			empleado = new Comision(identificacion,nombre,salario,ventas);
+		
+		if(tipo=='h'||tipo=='H')
+			empleado = new Hora(identificacion,nombre,horasLaboradas,salario);
+		
+		return empleado;
 	}
 
 }
